@@ -1,0 +1,21 @@
+{
+  "name": "findback",
+  "version": "1.0.0",
+  "description": "Nationwide community lost-and-found platform",
+  "private": true,
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test": "npm test --prefix server"
+  },
+  "keywords": [
+    "campus",
+    "marketplace",
+    "lost-and-found",
+    "university",
+    "resource-sharing"
+  ],
+  "author": "CampusConnect Team",
+  "license": "MIT"
+}

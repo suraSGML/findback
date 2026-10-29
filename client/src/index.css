@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-primary: #047857;
+    --brand-primary-hover: #065f46;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased font-sans selection:bg-emerald-100 selection:text-emerald-900;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-semibold text-slate-900;
+  }
+}
+
+@layer components {
+  /* Standard Form Input */
+  .input-field {
+    @apply w-full h-10 px-3.5 py-2 bg-white text-sm text-slate-900 placeholder-slate-400 border border-slate-300 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 disabled:bg-slate-50 disabled:text-slate-500 disabled:cursor-not-allowed;
+  }
+
+  /* Form Select */
+  .select-field {
+    @apply w-full h-10 px-3.5 py-2 bg-white text-sm text-slate-900 border border-slate-300 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 disabled:bg-slate-50 disabled:cursor-not-allowed;
+  }
+
+  /* Form Textarea */
+  .textarea-field {
+    @apply w-full p-3.5 bg-white text-sm text-slate-900 placeholder-slate-400 border border-slate-300 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 disabled:bg-slate-50 disabled:cursor-not-allowed;
+  }
+
+  /* Form Label */
+  .form-label {
+    @apply block text-xs font-medium text-slate-700 mb-1.5;
+  }
+
+  /* Standard Card */
+  .surface-card {
+    @apply bg-white border border-slate-200/90 rounded-xl shadow-sm transition-shadow;
+  }
+
+  /* Primary Button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-1.5 h-10 px-4 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 rounded-lg shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/30 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Secondary / Outline Button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-1.5 h-10 px-4 text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-300 rounded-lg shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400/20 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Destructive Button */
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-1.5 h-10 px-4 text-sm font-medium text-white bg-rose-600 hover:bg-rose-700 active:bg-rose-800 rounded-lg shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-rose-500/30 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Subtle Ghost Button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1.5 h-9 px-3 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400/20 disabled:opacity-50 disabled:pointer-events-none;
+  }
+}
+
+/* Subtle, polished scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
